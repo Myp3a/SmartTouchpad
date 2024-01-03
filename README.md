@@ -1,5 +1,5 @@
 # Smart Touchpad
-An utiility to customize Raider GE78HX Smart Touchpad shortcuts. Allows running apps and keybinds assignment.  
+An utility to customize Raider GE78HX Smart Touchpad shortcuts. Allows running apps and keybinds assignment.  
 ![Main screen](mainscreen.png)
 
 ## How to use
