@@ -1,0 +1,118 @@
+﻿<Window x:Class="SmartTouchpad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartTouchpad"
+        x:Name="Root"
+        mc:Ignorable="d"
+        MinWidth="450" MinHeight="300"
+        Title="Smart Touchpad Manager" Height="450" Width="800"
+        Loaded="Window_Loaded" Icon="tp.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer>
+        <StackPanel>
+            <local:ButtonData KeyName="Screenshot"
+                              ActionType="{Binding Screenshot.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Screenshot.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Screenshot.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Screenshot.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Recording"
+                              ActionType="{Binding Recording.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Recording.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Recording.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Recording.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Captures"
+                              ActionType="{Binding Captures.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Captures.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Captures.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Captures.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Explorer"
+                              ActionType="{Binding Explorer.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Explorer.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Explorer.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Explorer.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Keyboard"
+                              ActionType="{Binding Keyboard.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Keyboard.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Keyboard.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Keyboard.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Fan"
+                              ActionType="{Binding Fan.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Fan.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Fan.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Fan.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Emoji"
+                              ActionType="{Binding Emoji.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Emoji.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Emoji.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Emoji.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Project"
+                              ActionType="{Binding Project.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Project.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Project.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Project.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Webcam"
+                              ActionType="{Binding Webcam.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Webcam.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Webcam.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Webcam.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Bluetooth Discovery"
+                              ActionType="{Binding BtDiscovery.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding BtDiscovery.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding BtDiscovery.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding BtDiscovery.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Bluetooth"
+                              ActionType="{Binding Bluetooth.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Bluetooth.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Bluetooth.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Bluetooth.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Microphone"
+                              ActionType="{Binding Microphone.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Microphone.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Microphone.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Microphone.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Crosshair"
+                              ActionType="{Binding Crosshair.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Crosshair.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Crosshair.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Crosshair.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Macro 1"
+                              ActionType="{Binding Macro1.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Macro1.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Macro1.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Macro1.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Macro 2"
+                              ActionType="{Binding Macro2.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Macro2.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Macro2.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Macro2.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Macro 3"
+                              ActionType="{Binding Macro3.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Macro3.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Macro3.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Macro3.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Macro 4"
+                              ActionType="{Binding Macro4.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Macro4.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Macro4.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Macro4.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Macro 5"
+                              ActionType="{Binding Macro5.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding Macro5.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding Macro5.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding Macro5.Keys, ElementName=Root, Mode=TwoWay}"/>
+            <local:ButtonData KeyName="Macro Big"
+                              ActionType="{Binding MacroBig.Action, ElementName=Root, Mode=TwoWay}"
+                              AppPath="{Binding MacroBig.Path, ElementName=Root, Mode=TwoWay}"
+                              AppArguments="{Binding MacroBig.Args, ElementName=Root, Mode=TwoWay}"
+                              KeybindKeys="{Binding MacroBig.Keys, ElementName=Root, Mode=TwoWay}"/>
+        </StackPanel>
+        </ScrollViewer>
+        <Button Grid.Row="1" Content="Save" Click="SaveButton_Click"/>
+    </Grid>
+</Window>
