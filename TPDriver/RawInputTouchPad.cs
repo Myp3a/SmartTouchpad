@@ -154,8 +154,6 @@ namespace SmartTouchpad
       device.VKeyName = "A";
       device.VKey = vkey;
       string sMessage = device.Message.ToString("X8");
-      if (this.sPreviousMessage == "")
-        this.sPreviousMessage = sMessage.Substring(0,6);
       if (this.MessageValidationPass(sMessage))
       {
         if (this.sPreviousMessage.Contains("08"))
@@ -212,6 +210,7 @@ namespace SmartTouchpad
           touchpadButton = MainWindow.TouchpadButton.MacroMenu;
         this.sPreviousMessage = "";
       }
+      this.sPreviousMessage = sMessage.Substring(0, 6);
       if (this.KeyPressed == null)
         return;
       this.KeyPressed((object) this, new RawInputEventArg(device));
