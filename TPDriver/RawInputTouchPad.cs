@@ -153,9 +153,9 @@ namespace SmartTouchpad
       device.Message = RawInputTouchPad._rawBuffer.data.keyboard.Message;
       device.VKeyName = "A";
       device.VKey = vkey;
-      string sMessage = device.Message.ToString("X8").Substring(0, 6);
+      string sMessage = device.Message.ToString("X8");
       if (this.sPreviousMessage == "")
-        this.sPreviousMessage = sMessage;
+        this.sPreviousMessage = sMessage.Substring(0,6);
       if (this.MessageValidationPass(sMessage))
       {
         if (this.sPreviousMessage.Contains("08"))
@@ -219,14 +219,7 @@ namespace SmartTouchpad
 
     private bool MessageValidationPass(string sMessage)
     {
-      try
-      {
-        return sMessage == "000000";
-      }
-      catch (Exception ex)
-      {
-        return false;
-      }
+        return sMessage == "0000000B";
     }
 
     private static int VirtualKeyCorrection(int virtualKey, bool isE0BitSet, int makeCode)
