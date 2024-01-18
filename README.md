@@ -14,4 +14,3 @@ Probably, driver guide - https://www.codeproject.com/Articles/17123/Using-Raw-In
 ## TODO:
  - Mic volume
  - Keyboard backlight
- - Use self-written driver instead of decompiled MSI's driver
